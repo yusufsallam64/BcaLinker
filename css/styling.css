@@ -3,6 +3,11 @@ h1 {
     text-align: center;
     font-size: 35pt;
     font-weight: bold;
+}
+
+p {
+    color:white;
+    font-size: 18pt;
 
 }
 
@@ -15,7 +20,7 @@ h1 {
 .childHeader{
     position: absolute;
     padding-top: 100pt;
-    /*transform: translate(-50%, -50%);*/
+    border-top: 50pt;
 }
 
 .childBody{

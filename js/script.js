@@ -3,35 +3,28 @@ function openWin(link) {
     window.open(link);
 }
 
-// var dateTime = new Date()
-// var date = dateTime.getFullYear() + '-' + (dateTime.getMonth() + 1) + '-' + dateTime.getDate();
-// var time = dateTime.getHours() + ':' + dateTime.getMinutes() + ":" + dateTime.getSeconds();
-
-// var interval    =   0;
-// function start(){
-//     setTimeout( function(){
-//         ajax_function();
-//         interval    =   60;
-//         setInterval( function(){
-//             ajax_function();
-//         }, interval * 1000);
-//     }, interval * 1000);
-// }
+// $(document).ready(function(){
 //
-// function ajax_function(){
-//     $.ajax({
-//         url: "../time.php",
-//         context: document.body,
-//         success: function(result){
-//             $('.time').html(result);
-//         }
-//     });
-// }
+//     $("Clock")
 //
-// $( window ).load(function(){
-//     var time    =   new Date();
-//     interval    =   60 - time.getSeconds();
-//     if(interval==60)
-//         interval    =   0;
-//     start();
 // });
+
+
+
+var clockUpdater = setInterval(myTimer, 1000);
+
+function myTimer() {
+    var d = new Date();
+    var hours = d.getHours()
+
+
+    if (hours > 12) {
+        hours = hours - 12;
+        var t = hours + ":" + d.getMinutes() + ":" + d.getSeconds();
+    } else {
+        var t = hours + ":" + d.getMinutes() + ":" + d.getSeconds();
+    }
+
+
+    document.getElementById("Clock").innerHTML = t;
+}
