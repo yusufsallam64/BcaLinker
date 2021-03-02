@@ -1,3 +1,9 @@
 TODO
 Add images to website
 Maybe use python to add notifications // reminders ? Could use text box input and store in a json file or something
+Fix issue with middle box floating around and resizing, looks really bad, I think it would be easy
+Maybe only show the zoom links for the classes you have that day?
+Make your own schedule on the right, so that it isnt the ugly white it is right now
+
+Make center box resize so it doesn't take over the entire screen (IMPORTANT) --> issue is that it doesnt resize like everything else and is odd, make it resize similar to everything else and use %'s
+Fix memory leak --> I think it has something to do with the refreshing in the js file

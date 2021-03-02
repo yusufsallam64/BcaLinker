@@ -3,10 +3,10 @@ function openWin(link) {
     window.open(link);
 }
 
-
+var clockUpdater = setInterval(myTimer, 1000);
 
 function myTimer() {
-    var clockUpdater = setInterval(myTimer, 1000);
+
     var d = new Date();
     var hours = d.getHours();
     var minutes = d.getMinutes();
@@ -67,8 +67,6 @@ function myTimer() {
 }
 
 function getImage(){
-    var clockUpdater = setInterval(myTimer, 60000);
-
     var d = new Date();
     d = d.getDay();
     if(d === 3){
