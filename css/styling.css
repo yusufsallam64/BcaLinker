@@ -3,6 +3,8 @@ h1 {
     text-align: center;
     font-size: 35pt;
     font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 p {
@@ -11,19 +13,21 @@ p {
 
 }
 
-.container {
+.ContentContainer{
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
-.childHeader{
+.childText{
     position: absolute;
-    padding-top: 100pt;
+    padding-top: 0pt;
     border-top: 50pt;
+    width: 960px;
 }
 
-.childBody{
+.childContent{
     margin-top: 15%;
     padding-top: 40pt;
     position: absolute;
@@ -35,20 +39,18 @@ p {
 
 .FirstRow{
     text-align: center;
-    /*padding-top: 400pt;*/
 
 }
 
 .FirstRow, .SecondRow, .ThirdRow, .FourthRow, .FifthRow{
     color: #663399;
     text-align: center;
-    /*display: inline;*/
     padding-bottom: 40pt;
 
 }
 
 #bioengineering, #biology, #compsci, #math, #amerlit, #physed, #sql, #igs, #worldhistory, #spanish{
-    background-color: #730cd4; /* Green */
+    background-color: #730cd4;
     border-color: #ffffff;
     border: 2px;
     border-style: solid;
@@ -62,6 +64,7 @@ p {
     margin-right: 15pt;
     min-width: 250px;
 }
+
 #bioengineering:hover, #biology:hover, #compsci:hover, #math:hover, #amerlit:hover, #physed:hover, #sql:hover, #igs:hover, #powerschool:hover, #schoology:hover, #worldhistory:hover, #spanish:hover {
     border: 5px;
     background: #ef1a8f;
@@ -70,5 +73,18 @@ p {
 
 body {
     background-color: rgb(62, 62, 62);
+}
 
+
+
+#ScheduleHeader{
+    text-align: center;
+}
+
+#Images{
+    width: 250pt;
+    padding-top: 3.5%;
+    border: none;
+    display: block;
+    margin: 0 auto;
 }

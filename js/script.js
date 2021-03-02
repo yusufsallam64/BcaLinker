@@ -3,17 +3,10 @@ function openWin(link) {
     window.open(link);
 }
 
-// $(document).ready(function(){
-//
-//     $("Clock")
-//
-// });
 
-
-
-var clockUpdater = setInterval(myTimer, 1000);
 
 function myTimer() {
+    var clockUpdater = setInterval(myTimer, 1000);
     var d = new Date();
     var hours = d.getHours();
     var minutes = d.getMinutes();
@@ -73,4 +66,15 @@ function myTimer() {
     document.getElementById("Clock").innerHTML = t;
 }
 
+function getImage(){
+    var clockUpdater = setInterval(myTimer, 60000);
+
+    var d = new Date();
+    d = d.getDay();
+    if(d === 3){
+        document.getElementById("Images").src = "images/W_March_Schedule.png";
+    } else {
+        document.getElementById("Images").src = "images/M_T_TH_F_March_Schedule.png";
+    }
+}
 
