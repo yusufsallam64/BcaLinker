@@ -37,16 +37,10 @@ p {
     background: dimgray;
 }
 
-.FirstRow{
-    text-align: center;
-
-}
-
-.FirstRow, .SecondRow, .ThirdRow, .FourthRow, .FifthRow{
+#FirstRow, #SecondRow, #ThirdRow, #FourthRow, #FifthRow{
     color: #663399;
     text-align: center;
     padding-bottom: 40pt;
-
 }
 
 #bioengineering, #biology, #compsci, #math, #amerlit, #physed, #sql, #igs, #worldhistory, #spanish{
@@ -63,6 +57,7 @@ p {
     margin-left: 15pt;
     margin-right: 15pt;
     min-width: 250px;
+    height: 18.8%;
 }
 
 #bioengineering:hover, #biology:hover, #compsci:hover, #math:hover, #amerlit:hover, #physed:hover, #sql:hover, #igs:hover, #powerschool:hover, #schoology:hover, #worldhistory:hover, #spanish:hover {
