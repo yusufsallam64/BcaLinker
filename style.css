@@ -20,6 +20,18 @@ body {
     top: 7.5%;
 }
 
+header{
+    width: 100%;
+    text-align: right;
+    font-size: 1.25em;
+}
+
+header a
+{
+    text-decoration: none;
+    color:white;
+}
+
 h1 {
     font-size: 3em;
     font-weight: bold;
@@ -31,7 +43,7 @@ p {
     font-size: 1.5em;
 }
 
-input {
+input[type=button] {
     background-color: #730cd4;
     border-color: #ffffff;
     border: 2px;
@@ -50,7 +62,7 @@ input {
     height: 15%;
 }
 
-input:hover {
+input:hover[type=button] {
     background: #ef1a8f;
 }
 
