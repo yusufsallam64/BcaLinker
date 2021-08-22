@@ -2,13 +2,26 @@ const MONTHS = ["January", "February", "March", "April", "May", "June", "July", 
 const DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 var night = false;
 var month = MONTHS[new Date().getMonth()];
+var classesContainer;
 
 window.onload = (event) => {
+    classesContainer = document.getElementById("classesDiv");
+    renderClasses();
     timer();
     getImage();
     setInterval(timer, 1000);
 };
 
+function renderClasses() {
+    classes = JSON.parse(window.localStorage.getItem("classes"));
+    for (var key in classes) {
+        var c = document.createElement("input")
+        c.type = "button"
+        c.value = key
+        c.onclick = function () { window.open(classes[key]); }
+        classesContainer.appendChild(c);
+    }
+}
 
 function timer() {
 
