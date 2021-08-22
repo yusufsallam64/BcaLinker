@@ -40,7 +40,7 @@ function renderClasses() {
         if (key) {
             var c = document.createElement("input")
             c.type = "button"
-            c.value = key + " | " + classes[key]
+            c.value = key
             c.onclick = function () { removeClass(key) }
             classesContainer.appendChild(c);
         }

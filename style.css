@@ -10,25 +10,24 @@ body {
     margin: auto;
     width: 33%;
     background: dimgray;
+    border-radius: 10px;
 }
 
-.scheduleDiv
-{
-    float:right;
+.scheduleDiv {
+    float: right;
     position: absolute;
     right: 7.5%;
     top: 7.5%;
 }
 
-header{
+header {
     width: 100%;
     text-align: right;
 }
 
-a
-{
+a {
     text-decoration: underline;
-    color:white;
+    color: white;
     font-size: 1.25em;
 }
 
@@ -39,8 +38,12 @@ h1 {
     margin-bottom: 0;
 }
 
-p {
+p, label {
     font-size: 1.5em;
+}
+
+form {
+    line-height: 5em;
 }
 
 input[type=button] {
@@ -49,6 +52,7 @@ input[type=button] {
     border: 2px;
     border-style: solid;
     color: white;
+    border-radius: 10px;
     font-size: 1.15em;
     text-decoration: none;
     padding-left: 1.35em;
@@ -66,6 +70,10 @@ input:hover[type=button] {
     background: #ef1a8f;
 }
 
+input[type=text] {
+    min-width: 30%;
+    line-height: 2em;
+}
 #images {
     width: 250pt;
     padding-top: 3.5%;
