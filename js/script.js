@@ -14,12 +14,27 @@ window.onload = (event) => {
 
 function renderClasses() {
     classes = JSON.parse(window.localStorage.getItem("classes"));
-    for (var key in classes) {
-        var c = document.createElement("input")
-        c.type = "button"
-        c.value = key
-        c.onclick = function () { window.open(classes[key]); }
-        classesContainer.appendChild(c);
+    if (classes == null || Object.keys(classes).length === 0) {
+        var p = document.createElement("p")
+        var text = document.createTextNode("No Classes detected!");
+        p.appendChild(text);
+        classesContainer.appendChild(p);
+        var a = document.createElement('a');
+        var linkText = document.createTextNode("Add Classes");
+        a.appendChild(linkText);
+        a.href = "/class-list.html";
+        classesContainer.appendChild(a);
+    }
+    else {
+        for (var key in classes) {
+            if (key) {
+                var c = document.createElement("input")
+                c.type = "button"
+                c.value = key
+                c.onclick = function () { window.open(classes[key]); }
+                classesContainer.appendChild(c);
+            }
+        }
     }
 }
 
