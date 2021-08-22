@@ -1,11 +1,8 @@
-* {
-    box-sizing: border-box;
-}
-
 body {
     background-color: rgb(62, 62, 62);
     color: white;
     text-align: center;
+    box-sizing: border-box;
 }
 
 h1 {
@@ -22,15 +19,14 @@ p {
 input {
     background-color: #730cd4;
     border-color: #ffffff;
-    border: 2px;
+    border: 3px;
     border-style: solid;
     color: white;
-    padding: 1.35em 1em;
+    font-size: 1.15em;
     text-decoration: none;
-    font-size: 16px;
-    margin-left: 15pt;
-    margin-right: 15pt;
-    min-width: 250px;
+    padding: 1.35em 1em;
+    margin-bottom: 10%;
+    min-width: 40%;
     height: 20%;
 }
 
@@ -45,47 +41,11 @@ input:hover {
     align-items: center;
 }
 
-.childText {
-    position: absolute;
-    padding-top: 0pt;
-    border-top: 50pt;
-    width: 960px;
-}
-
 .childContent {
-    margin-top: 15%;
     padding-top: 40pt;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: auto;
+    width: 35%;
     background: dimgray;
-}
-
-.column {
-    float: left;
-    padding: 10px;
-}
-
-.left, .right {
-    width: 33%;
-}
-
-.middle {
-    width: 34%;
-}
-
-/* Clear floats after the columns */
-
-.TextContainer:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.ButtonRow {
-    color: #663399;
-    padding-bottom: 40pt;
 }
 
 #Images {
