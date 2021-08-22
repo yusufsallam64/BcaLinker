@@ -63,7 +63,7 @@ function myTimer() {
         var t = day + ", " + month + " " + d.getDate() + " || " + hours + ":" + minutes + ":" + seconds + " a.m";
     }
 
-    document.getElementById("Clock").innerHTML = t;
+    document.getElementById("clock").innerHTML = t;
 }
 
 function getImage(){

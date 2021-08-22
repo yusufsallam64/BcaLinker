@@ -2,41 +2,62 @@
     box-sizing: border-box;
 }
 
-h1 {
-    color: #ffffff;
+body {
+    background-color: rgb(62, 62, 62);
+    color: white;
     text-align: center;
-    font-size: 35pt;
+}
+
+h1 {
+    font-size: 3em;
     font-weight: bold;
     margin-top: 0;
     margin-bottom: 0;
 }
 
 p {
-    color:white;
-    font-size: 18pt;
-
+    font-size: 1.5em;
 }
 
-.ContentContainer{
+input {
+    background-color: #730cd4;
+    border-color: #ffffff;
+    border: 2px;
+    border-style: solid;
+    color: white;
+    padding: 1.35em 1em;
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: 15pt;
+    margin-right: 15pt;
+    min-width: 250px;
+    height: 20%;
+}
+
+input:hover {
+    border: 5px;
+    background: #ef1a8f;
+}
+
+.ContentContainer {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
-.childText{
+.childText {
     position: absolute;
     padding-top: 0pt;
     border-top: 50pt;
     width: 960px;
 }
 
-.childContent{
+.childContent {
     margin-top: 15%;
     padding-top: 40pt;
     position: absolute;
     top: 20%;
-    left:50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     background: dimgray;
 }
@@ -55,52 +76,19 @@ p {
 }
 
 /* Clear floats after the columns */
+
 .TextContainer:after {
     content: "";
     display: table;
     clear: both;
 }
 
-.ButtonRow{
+.ButtonRow {
     color: #663399;
-    text-align: center;
     padding-bottom: 40pt;
 }
 
-input{
-    background-color: #730cd4;
-    border-color: #ffffff;
-    border: 2px;
-    border-style: solid;
-    color: white;
-    padding: 20px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin-left: 15pt;
-    margin-right: 15pt;
-    min-width: 250px;
-    height: 18.8%;
-}
-
-input:hover {
-    border: 5px;
-    background: #ef1a8f;
-    box-shadow: 0 0 1px #777;
-}
-
-body {
-    background-color: rgb(62, 62, 62);
-}
-
-
-
-#ScheduleHeader{
-    text-align: center;
-}
-
-#Images{
+#Images {
     width: 250pt;
     padding-top: 3.5%;
     border: none;
