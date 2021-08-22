@@ -12,6 +12,14 @@ body {
     background: dimgray;
 }
 
+.scheduleDiv
+{
+    float:right;
+    position: absolute;
+    right: 7.5%;
+    top: 7.5%;
+}
+
 h1 {
     font-size: 3em;
     font-weight: bold;
@@ -46,7 +54,7 @@ input:hover {
     background: #ef1a8f;
 }
 
-#Images {
+#images {
     width: 250pt;
     padding-top: 3.5%;
     border: none;

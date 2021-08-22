@@ -5,7 +5,7 @@ var month = MONTHS[new Date().getMonth()];
 
 window.onload = (event) => {
     timer();
-    // getImage();
+    getImage();
     setInterval(timer, 1000);
 };
 
@@ -43,8 +43,8 @@ function getImage() {
     var d = new Date();
     d = d.getDay();
     if (d === 3) {
-        document.getElementById("Images").src = "images/W_April_Schedule.png";
+        document.getElementById("images").src = "images/W_April_Schedule.png";
     } else {
-        document.getElementById("Images").src = "images/M_T_TH_F_March_Schedule.png";
+        document.getElementById("images").src = "images/M_T_TH_F_March_Schedule.png";
     }
 }
