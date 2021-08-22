@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 h1 {
     color: #ffffff;
     text-align: center;
@@ -37,13 +41,33 @@ p {
     background: dimgray;
 }
 
-#FirstRow, #SecondRow, #ThirdRow, #FourthRow, #FifthRow{
+.column {
+    float: left;
+    padding: 10px;
+}
+
+.left, .right {
+    width: 33%;
+}
+
+.middle {
+    width: 34%;
+}
+
+/* Clear floats after the columns */
+.TextContainer:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.ButtonRow{
     color: #663399;
     text-align: center;
     padding-bottom: 40pt;
 }
 
-#bioengineering, #biology, #compsci, #math, #amerlit, #physed, #sql, #igs, #worldhistory, #spanish{
+input{
     background-color: #730cd4;
     border-color: #ffffff;
     border: 2px;
@@ -60,7 +84,7 @@ p {
     height: 18.8%;
 }
 
-#bioengineering:hover, #biology:hover, #compsci:hover, #math:hover, #amerlit:hover, #physed:hover, #sql:hover, #igs:hover, #powerschool:hover, #schoology:hover, #worldhistory:hover, #spanish:hover {
+input:hover {
     border: 5px;
     background: #ef1a8f;
     box-shadow: 0 0 1px #777;
