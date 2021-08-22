@@ -5,6 +5,13 @@ body {
     box-sizing: border-box;
 }
 
+.childContent {
+    padding-top: 40pt;
+    margin: auto;
+    width: 33%;
+    background: dimgray;
+}
+
 h1 {
     font-size: 3em;
     font-weight: bold;
@@ -19,33 +26,24 @@ p {
 input {
     background-color: #730cd4;
     border-color: #ffffff;
-    border: 3px;
+    border: 2px;
     border-style: solid;
     color: white;
     font-size: 1.15em;
     text-decoration: none;
-    padding: 1.35em 1em;
+    padding-left: 1.35em;
+    padding-right: 1.35em;
+    padding-top: 0.95em;
+    padding-bottom: 0.95em;
     margin-bottom: 10%;
+    margin-left: 3%;
+    margin-right: 3%;
     min-width: 40%;
-    height: 20%;
+    height: 15%;
 }
 
 input:hover {
-    border: 5px;
     background: #ef1a8f;
-}
-
-.ContentContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.childContent {
-    padding-top: 40pt;
-    margin: auto;
-    width: 35%;
-    background: dimgray;
 }
 
 #Images {
