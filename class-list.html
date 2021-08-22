@@ -27,7 +27,14 @@
             <input type="button" value="Add Class" onclick=addClass()>
         </form>
     </div>
-
+    <div id="contextMenu" class="context-menu" style="display: hidden">
+        <ul class="menu">
+            <li class="rename" onclick="rename()">Rename Class</li>
+            <li class="changeLink" onclick="changeLink()">Change Schoology Link</li>
+            <li class="remove" onclick="remove()">Remove Class</li>
+            <li class="exit" onclick="exit()">Exit</li>
+        </ul>
+    </div>
 </body>
 
 </html>

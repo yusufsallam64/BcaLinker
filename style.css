@@ -74,10 +74,39 @@ input[type=text] {
     min-width: 30%;
     line-height: 2em;
 }
+
 #images {
     width: 250pt;
     padding-top: 3.5%;
     border: none;
     display: block;
     margin: 0 auto;
+}
+
+ul {
+    list-style: none;
+}
+
+.context-menu {
+    position: absolute;
+}
+
+.menu {
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px 0;
+    border-radius: 2px;
+    border: black;
+    border-style: solid;
+}
+
+.menu>li {
+    font: inherit;
+    padding: 10px 30px 10px 15px;
+    width: 100%;
+    display: flex;
+    position: relative;
+    text-decoration: unset;
+    color: black;
 }
