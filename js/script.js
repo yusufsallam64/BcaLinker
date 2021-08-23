@@ -4,7 +4,7 @@ var night = false;
 var month = MONTHS[new Date().getMonth()];
 var classesContainer;
 
-window.onload = (event) => {
+window.onload = () => {
     classesContainer = document.getElementById("classesDiv");
     renderClasses();
     timer();
@@ -13,7 +13,9 @@ window.onload = (event) => {
 };
 
 function renderClasses() {
+    // Get classes from localStorage
     classes = JSON.parse(window.localStorage.getItem("classes"));
+    // Check if classes exists and has classes in it
     if (classes == null || Object.keys(classes).length === 0) {
         var p = document.createElement("p")
         var text = document.createTextNode("No Classes detected!");
@@ -26,8 +28,11 @@ function renderClasses() {
         classesContainer.appendChild(a);
     }
     else {
+        // Loop through all classes
         for (var key in classes) {
+            // If its a valid key (i.e. not an empty string)
             if (key) {
+                // Create a button for it
                 var c = document.createElement("input")
                 c.type = "button"
                 c.value = key
@@ -39,7 +44,6 @@ function renderClasses() {
 }
 
 function timer() {
-
     var d = new Date();
     var hours = d.getHours();
     var minutes = d.getMinutes();
