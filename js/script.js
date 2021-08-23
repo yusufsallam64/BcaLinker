@@ -17,11 +17,11 @@ function renderClasses() {
     classes = JSON.parse(window.localStorage.getItem("classes"));
     // Check if classes exists and has classes in it
     if (classes == null || Object.keys(classes).length === 0) {
-        var p = document.createElement("p")
+        var p = document.createElement("p");
         var text = document.createTextNode("No Classes detected!");
         p.appendChild(text);
         classesContainer.appendChild(p);
-        var a = document.createElement('a');
+        var a = document.createElement("a");
         var linkText = document.createTextNode("Add Classes");
         a.appendChild(linkText);
         a.href = "/class-list.html";
@@ -33,9 +33,9 @@ function renderClasses() {
             // If its a valid key (i.e. not an empty string)
             if (key) {
                 // Create a button for it
-                var c = document.createElement("input")
-                c.type = "button"
-                c.value = key
+                var c = document.createElement("input");
+                c.type = "button";
+                c.value = key;
                 c.onclick = function () { window.open(classes[key]); }
                 classesContainer.appendChild(c);
             }
@@ -75,8 +75,8 @@ function getImage() {
     var d = new Date();
     d = d.getDay();
     if (d === 3) {
-        document.getElementById("images").src = "images/W_April_Schedule.png";
+        document.getElementById("images").src = "./images/W_April_Schedule.png";
     } else {
-        document.getElementById("images").src = "images/M_T_TH_F_March_Schedule.png";
+        document.getElementById("images").src = "./images/M_T_TH_F_March_Schedule.png";
     }
 }

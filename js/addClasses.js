@@ -29,7 +29,7 @@ function addClass() {
 
 // Replace localStorage classes with empty JSON
 function removeAll() {
-    res = confirm("This action is irreversible!")
+    res = confirm("This action is irreversible!");
     window.localStorage.setItem("classes", res ? "{}" : window.localStorage.getItem("classes"));
     renderClasses();
 }
@@ -37,17 +37,14 @@ function removeAll() {
 // Paste the classes JSON to the clipboard
 function exportClasses() {
     navigator.clipboard.writeText(window.localStorage.getItem("classes"));
-    alert("Classes exported to clipboard")
+    alert("Classes exported to clipboard");
 }
 
 // Get JSON input from user and set it to localStorage classes
 function importClasses() {
     try {
-        inpt = prompt("Insert classes JSON:")
-        console.log(typeof inpt)
-        console.log(inpt)
+        inpt = prompt("Insert classes JSON:");
         inpt = JSON.parse(inpt);
-        console.log(typeof inpt)
         window.localStorage.setItem("classes", JSON.stringify(inpt));
         renderClasses();
     }
@@ -77,10 +74,10 @@ function renderClasses() {
         // If its a valid class
         if (key) {
             // Create a button for it and add event listener
-            var c = document.createElement("input")
-            c.type = "button"
-            c.value = key
-            c.onclick = function () { showMenu(key) }
+            var c = document.createElement("input");
+            c.type = "button";
+            c.value = key;
+            c.onclick = function () { showMenu(key) };
             classesContainer.appendChild(c);
         }
     }
@@ -88,7 +85,9 @@ function renderClasses() {
 
 // Show the context menu
 function showMenu(key) {
-    var menu = document.getElementById("contextMenu")
+    var menu = document.getElementById("contextMenu");
+    // TODO: move menu to cursor position
+    // TODO: add option to sort classes
     activeClass = key;
     menu.style.display = 'block';
 }
