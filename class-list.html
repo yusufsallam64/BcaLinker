@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>Make Class List BCA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./js/addClasses.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="./index.html">Home</a>
+    </header>
+    <h1>Add Your Classes</h1>
+    <p id="clock"></p>
+
+    <div class="mainDiv">
+        <div id="classesDiv" style="width: 50%"></div>
+        <form>
+            <label for="className">Class Name:</label>
+            <input type="text" id="className" placeholder="Intro to Computer Science">
+            <br>
+            <label for="schoologyLink">Schoology Link:</label>
+            <input type="text" id="schoologyLink" placeholder="https://bca.schoology.com/course/1234567890/materials">
+            <br>
+            <input type="button" value="Add Class" onclick=addClass() style="margin-bottom: 0">
+            <br>
+            <input type="button" value="Remove All" onclick=removeAll() style="margin-bottom: 0">
+            <br>
+            <input type="button" value="Export Classes" onclick=exportClasses() style="margin-bottom: 0;min-width: 19%;margin-right: 1%;">
+            <input type="button" value="Import Classes" onclick=importClasses() style="margin-bottom: 0;min-width: 19%;margin-left: 1%;">
+        </form>
+    </div>
+    <div id="contextMenu" class="context-menu" style="display: hidden">
+        <ul class="menu">
+            <li class="rename" onclick="rename()">Rename Class</li>
+            <li class="changeLink" onclick="changeLink()">Change Schoology Link</li>
+            <li class="remove" onclick="remove()">Remove Class</li>
+            <li class="exit" onclick="exit()">Exit</li>
+        </ul>
+    </div>
+</body>
+
+</html>
