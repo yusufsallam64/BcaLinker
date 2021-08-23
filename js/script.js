@@ -24,7 +24,7 @@ function renderClasses() {
         var a = document.createElement("a");
         var linkText = document.createTextNode("Add Classes");
         a.appendChild(linkText);
-        a.href = "/class-list.html";
+        a.href = "./class-list.html";
         classesContainer.appendChild(a);
     }
     else {
