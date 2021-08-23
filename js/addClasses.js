@@ -27,6 +27,36 @@ function addClass() {
 
 }
 
+// Replace localStorage classes with empty JSON
+function removeAll() {
+    res = confirm("This action is irreversible!")
+    window.localStorage.setItem("classes", res ? "{}" : window.localStorage.getItem("classes"));
+    renderClasses();
+}
+
+// Paste the classes JSON to the clipboard
+function exportClasses() {
+    navigator.clipboard.writeText(window.localStorage.getItem("classes"));
+    alert("Classes exported to clipboard")
+}
+
+// Get JSON input from user and set it to localStorage classes
+function importClasses() {
+    try {
+        inpt = prompt("Insert classes JSON:")
+        console.log(typeof inpt)
+        console.log(inpt)
+        inpt = JSON.parse(inpt);
+        console.log(typeof inpt)
+        window.localStorage.setItem("classes", JSON.stringify(inpt));
+        renderClasses();
+    }
+    catch
+    {
+        alert("Valid classes not found");
+    }
+}
+
 function saveClasses() {
     // Convert classes dict to a JSON string and save it to localStorage
     window.localStorage.setItem("classes", JSON.stringify(classes));

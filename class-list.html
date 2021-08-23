@@ -27,7 +27,12 @@
             <label for="schoologyLink">Schoology Link:</label>
             <input type="text" id="schoologyLink" placeholder="https://bca.schoology.com/course/1234567890/materials">
             <br>
-            <input type="button" value="Add Class" onclick=addClass()>
+            <input type="button" value="Add Class" onclick=addClass() style="margin-bottom: 0">
+            <br>
+            <input type="button" value="Remove All" onclick=removeAll() style="margin-bottom: 0">
+            <br>
+            <input type="button" value="Export Classes" onclick=exportClasses() style="margin-bottom: 0;min-width: 19%;margin-right: 1%;">
+            <input type="button" value="Import Classes" onclick=importClasses() style="margin-bottom: 0;min-width: 19%;margin-left: 1%;">
         </form>
     </div>
     <div id="contextMenu" class="context-menu" style="display: hidden">
