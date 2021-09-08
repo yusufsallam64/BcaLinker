@@ -77,7 +77,7 @@ function renderClasses() {
             var c = document.createElement("input");
             c.type = "button";
             c.value = key;
-            c.onclick = function () { showMenu(key) };
+            c.onclick = function () { showMenu(this.value); };
             classesContainer.appendChild(c);
         }
     }
@@ -100,8 +100,12 @@ function exit() {
 // Prompt user for new name and rename active class
 function rename() {
     let newName = prompt("Enter the new name for " + activeClass);
-    classes[newName] = classes[activeClass];
-    delete classes[activeClass];
+    if (newName) {
+        classes[newName] = classes[activeClass];
+        delete classes[activeClass];
+    } else {
+        alert("Invalid name!");
+    }
     exit();
     saveClasses();
     renderClasses();
@@ -109,7 +113,12 @@ function rename() {
 
 // Prompt user for new link and change link for active class
 function changeLink() {
-    classes[activeClass] = prompt("Enter the new link for " + activeClass);
+    let newLink = prompt("Enter the new link for " + activeClass);
+    if (newLink.startsWith("https://bca.schoology.com/course/")) {
+        classes[activeClass] = newLink;
+    } else {
+        alert("Invalid link!");
+    }
     exit();
     saveClasses();
     renderClasses();
